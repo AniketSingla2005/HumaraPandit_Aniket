@@ -7,6 +7,6 @@ AI tools were used during the development of this project for:
 * Documentation support
 * Basic debugging guidance
 
-The project was reviewed, modified, and organized by the candidate before submission.
+The project was reviewed, modified, and organized by me before submission.
 
 AI was used as a development aid and not as a substitute for understanding or reviewing the final implementation.
