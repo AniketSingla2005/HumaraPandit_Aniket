@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroDesk CRM</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">
+            🔮 AstroDesk
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#" onclick="showSection('dashboard')">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="showSection('addClient')">
+                    Add Client
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="showSection('manageClients')">
+                    Manage Clients
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="container">
+
+        <!-- Dashboard -->
+
+        <section id="dashboard" class="page">
+
+            <div class="welcome-card">
+
+                <h1>
+                    Welcome to AstroDesk
+                </h1>
+
+                <p>
+                    Manage astrology clients with ease.
+                </p>
+
+            </div>
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <h2 id="totalClients">
+                        0
+                    </h2>
+
+                    <p>
+                        Total Clients
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 id="pendingClients">
+                        0
+                    </h2>
+
+                    <p>
+                        Pending
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 id="completedClients">
+                        0
+                    </h2>
+
+                    <p>
+                        Completed
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Add Client -->
+
+        <section id="addClient" class="page hidden">
+
+            <div class="form-card">
+
+                <h2>
+                    Add New Client
+                </h2>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Client Name">
+
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Phone Number">
+
+                <input
+                    type="text"
+                    id="zodiac"
+                    placeholder="Zodiac Sign">
+
+                <select id="status">
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                </select>
+
+                <button onclick="addClient()">
+                    Add Client
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Manage Clients -->
+
+        <section id="manageClients" class="page hidden">
+
+            <div class="manage-header">
+
+                <h2>
+                    Client Records
+                </h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search Client..."
+                    onkeyup="searchClient()">
+
+            </div>
+
+            <div id="clientList">
+
+                <!-- JS will generate cards here -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+
+        AstroDesk CRM © 2026
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
